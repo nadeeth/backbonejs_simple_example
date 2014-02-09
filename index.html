@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+    <head>
+        <title>Backbonejs Simple MVC Example</title>
+    </head>
+    <body>
+
+        <!-- The List -->
+        <section id="list-section">
+            <header id="header">
+                <h1>The List</h1>
+                <input id="new-item" placeholder="Type Here" autofocus>
+            </header>
+            <section id="main">
+                <ul id="items-list"></ul>
+            </section>
+        </section>
+
+        <!-- The micro template for a single item -->
+        <script type="text/template" id="item-template">
+            <div class="view">
+                <label><%- title %></label>
+                <a href="#" class="destroy">X</a>
+            </div>
+        </script>
+
+        <!-- Libraries -->
+        <script src="lib/jquery.js"></script>
+        <script src="lib/underscore.js"></script>
+        <script src="lib/backbone.js"></script>
+        <script src="lib/backbone.localStorage.js"></script>
+        
+        <!-- MVC -->
+        <script src="js/models/item.js"></script>
+        <script src="js/collections/list.js"></script>
+        <script src="js/views/item-view.js"></script>
+        <script src="js/views/list-view.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
